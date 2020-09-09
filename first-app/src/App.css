@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 20vmin;
   pointer-events: none;
 }
 
@@ -40,4 +40,13 @@
 
 .clock{
   font-size: 40px;
+}
+
+.button1{
+  font-size: 40px;
+  border-radius:12px;
+  background: rgb(35, 192, 153);
+  color:white;
+  border:none;
+  box-shadow: 1px 1px 2px rgb(117, 115, 115);
 }

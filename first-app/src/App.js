@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Clock from './clock.js';
+import Button from './button.js';
 
 function App() {
   return (
@@ -13,7 +14,12 @@ function App() {
       <div className="clock">
         <Clock />
       </div>
+      
 
+      <div>
+      <Button />
+
+      </div>
       
     </div>
   );
