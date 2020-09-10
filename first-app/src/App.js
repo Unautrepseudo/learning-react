@@ -14,11 +14,8 @@ function App() {
       <div className="clock">
         <Clock />
       </div>
-      
-
       <div>
-      <Button />
-
+        <Button />
       </div>
       
     </div>
