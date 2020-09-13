@@ -1,10 +1,14 @@
 import React from 'react';
+import Button from './button.js';
+
 
 class Clock extends React.Component{
     constructor(props){
         super(props);
+        this.toggleDisplay = this.toggleDisplay.bind(this);
         this.state={
-            time: new Date().toLocaleString()
+            time: new Date().toLocaleString(),
+            display : 'flex'
         };
     }
     componentDidMount(){
@@ -21,11 +25,22 @@ class Clock extends React.Component{
             date: new Date().toLocaleString()
         });
     }
+    toggleDisplay(){
+        let newDisplay = this.state.display === 'flex'? 'none':'flex';
+        this.setState({
+            display: newDisplay
+        })
+    }
     render(){
         return(
-            <p>
-                Nous sommes le {this.state.date}
-            </p>
+            <div>
+                <p>
+                    Nous sommes le {this.state.date}
+                </p>
+                <div>
+                    <Button clickHandler={this.toggleDisplay} />
+                </div>
+            </div>
         );
     }
 }

@@ -4,19 +4,22 @@ class Button extends React.Component{
     constructor(props){
         super (props);
         this.state={
-            content : 'Faire disparaître le timer'
-        }
+            content : true
+        };
         this.handleToggle =this.handleToggle.bind(this);
     }
     handleToggle(){
-        this.setState({
-            content: 'Faire apparaître le timer'
-        })
+        this.props.clickHandler();
+        this.setState( state =>({
+            content: !state.content
+        }));
     }
 
     render(){
         return(
-        <button onClick={this.handleToggle}className="button1">{this.state.content}</button>
+        <button onClick={this.handleToggle}className="button1">
+            {this.state.content ? 'Effacer le timer' : 'afficher le timer'}
+        </button>
         );
     }
 }
