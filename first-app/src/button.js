@@ -17,8 +17,8 @@ class Button extends React.Component{
 
     render(){
         return(
-        <button onClick={this.handleToggle}className="button1">
-            {this.state.content ? 'Effacer le timer' : 'afficher le timer'}
+        <button onClick={this.handleToggle} className="button1">
+            {this.state.content ? 'Masquer la date du jour' : 'Afficher la date du jour'}
         </button>
         );
     }

@@ -40,6 +40,8 @@
 
 .clock{
   font-size: 40px;
+  display: flex;
+  justify-content: center;
 }
 
 .button1{
@@ -50,4 +52,18 @@
   border:none;
   box-shadow: 1px 1px 2px rgb(117, 115, 115);
   outline: none;
+}
+
+
+.ProductTableHeader-current {
+  background-color: #0ff;
+}
+
+.ProductRow-out-of-stock {
+  color: red;
+}
+
+#root{
+  display:grid;
+  place-items:center;
 }

@@ -8,7 +8,6 @@ class Clock extends React.Component{
         this.toggleDisplay = this.toggleDisplay.bind(this);
         this.state={
             time: new Date().toLocaleString(),
-            display : 'flex'
         };
     }
     componentDidMount(){
@@ -26,10 +25,9 @@ class Clock extends React.Component{
         });
     }
     toggleDisplay(){
-        let newDisplay = this.state.display === 'flex'? 'none':'flex';
-        this.setState({
-            display: newDisplay
-        })
+       this.setState(state =>({
+           showClock : !state.display
+       }));
     }
     render(){
         return(
